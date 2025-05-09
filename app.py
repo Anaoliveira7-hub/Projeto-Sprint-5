@@ -2,10 +2,6 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-car_data = pd.read_csv('vehicles.csv')
-hist_button = st.button('Criar histograma') # criar um botão
-scatter_button = st.button('Criar um gráfico de dispersão') #criar um botão
-
 st.header('Relação entre Preço e Quilometragem Percorrida')
 st.markdown(
     "<p style='font-size: 14px;'>"
@@ -14,6 +10,12 @@ st.markdown(
     "ou padrões por ano, tipo de combustível e outros fatores."
     "</p>",
     unsafe_allow_html=True)
+
+car_data = pd.read_csv('vehicles.csv')
+hist_button = st.button('Criar histograma') # criar um botão
+scatter_button = st.button('Criar um gráfico de dispersão') #criar um botão
+
+
 
 if hist_button: 
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
