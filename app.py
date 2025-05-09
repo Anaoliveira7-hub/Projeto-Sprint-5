@@ -21,7 +21,7 @@ if scatter_button:
 
 #criar uma caixa de seleção
 build_histogram = st.checkbox('Criar um histograma')
-build_scatter = st.checkbox('Criar um histograma')
+build_scatter = st.checkbox('Criar um gráfico de dispersão')
 
 if build_histogram: # se a caixa de seleção for selecionada
     st.write('Criando um histograma para a coluna odometer') 
