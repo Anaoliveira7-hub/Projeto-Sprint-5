@@ -25,8 +25,8 @@ build_scatter = st.checkbox('Criar um gráfico de dispersão')
 
 if build_histogram: # se a caixa de seleção for selecionada
     st.write('Criando um histograma para a coluna odometer') 
-    fig = px.scatter(car_data, x="odometer", y="price")  # criar gráfico de dispersão
-    st.plotly_chart(fig, use_container_width=True)
+    fig = px.histogram(car_data, x="odometer") # criar um histograma
+    st.plotly_chart(fig, use_container_width=True) # exibir um gráfico Plotly inte
 
 if build_scatter: # se a caixa de seleção for selecionada
     st.write('Criando um gráfico de dispersão para a coluna odometer')
